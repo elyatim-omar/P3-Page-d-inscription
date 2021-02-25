@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page d'inscription</title>
+    <link rel='stylesheet' type='text/css' href='inscstyle.css'>
+    <script src='inscjs.js'></script>
+    <h1>Page d'inscription</h1>
+</head>
+<body>
+    <div id="form">
+    <form>
+        <label >Nom : </label>
+        <input type="text" id="nom" >&emsp;&emsp;
+        <label >Prénom: </label>
+        <input type="text" id="Prenom" ></br></br></br></br>
+        <div id="at" >
+        <label >Adresse: </label>
+        <input type="text" id="Adresse" >&emsp;
+        <label >Téléphone: </label>
+        <input type="tel" id="Telephone" ></br></br></br></br>
+    </div>
+    <div id="ee">
+        <label >Email: </label>
+        <input type="text" id="Email" ></br></br></br>
+    </div>
+        <input type="button" value="submit" onclick="ins()" id="ok" >
+        <br id="espace">
+       
+    </form>
+    </div>  
+    <div id="aff">
+     <h2 id="hh">résultats</h2>  
+    <p id="p"></p>
+       
+    <div id="bt"><input type="button"  value="imprimer" onclick="window.print()" ></div>
+    </div>
+</body>
+</html>
