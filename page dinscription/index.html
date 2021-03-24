@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+  <div class="content col-md-6 col-sm-12 float-left">
+     <div class="text">
+       <h1>Registration page</h1>
+
+       <p>Welcome to our first event you can sign here </p>
+     </div>
+     <img src="laptop.gif">
+    </div>
+        <form  class = "col-md-6 col-sm-12 float-right  " >
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Name">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputSurname4">Surname</label>
+                <input type="text" class="form-control" id="inputSurname" placeholder="Surname">
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPhone">Phone number</label>
+                  <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                </div>
+              </div>
+            <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="savename() ; savesurname() ; saveadress() ; savephone() ; saveemail()">Submit</button>
+<a class="btn btn-outline-light" href="result.html">list of participants</a>
+<a class="btn btn-outline-light" href="certificate.html">Certificates</a>
+
+          </form>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</body>
+</html>
