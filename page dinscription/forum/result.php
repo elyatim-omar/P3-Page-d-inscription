@@ -118,6 +118,7 @@ $_SESSION['email'] =  $email;
      </div>
      </div>
              <button type="button" class="btn btn-primary d-print-none " onclick="window.print()">print</button>
+             <a href="index.php" type="button" class="btn btn-secondary d-print-none ">new applicant</a>
          
     </body>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
