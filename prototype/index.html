@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>local</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div>
+<h1 id="output">choose sports</h1>
+<input id="input" placeholder="sports" >
+<button type="submit" onclick="save()"> save </button>
+<button onclick="view()"> view </button>
+
+    </div>
+</body>
+<script>
+
+    function save(){
+var new_data = document.getElementById('input').value;
+
+if(localStorage.getItem('data') == null ){
+localStorage.setItem('data' , '[]' );
+}
+
+var old_data = JSON.parse(localStorage.getItem('data'));
+
+old_data.push(new_data);
+
+localStorage.setItem('data' , JSON.stringify(old_data) );
+    }
+
+    function view () {
+if(localStorage.getItem('data') != null)
+document.getElementById('output').innerHTML = JSON.parse(localStorage.getItem('data')).join(`<br>`);
+    }
+</script>
+</html>

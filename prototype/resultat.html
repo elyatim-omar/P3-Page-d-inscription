@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>resultat</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    <h1>Result Page </h1>
+ <p id="p"></p>
+
+</body>
+<script >
+window.addEventListener('load', () => { 
+
+    var data = JSON.parse(localStorage.getItem('data'));
+for(let i=0 ; i< data.length ; i++ )
+    {document.getElementById('p').innerHTML +="<b id=op>sport:</b>&nbsp;"+ data [i]+"<br>";}
+
+
+
+})
+
+
+</script>
+
+</html>
