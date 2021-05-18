@@ -1,29 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+   
 </head>
 <body>
-    <div id="app"></div>
-    <script type="text/javascript" >
+  <div class="content col-md-6 col-sm-12 float-left">
+     <div class="text">
+       <h1>Registration page</h1>
 
-        // KeyWord : JSON From the Server
-        $.get("liste-apprenants.php", function( data ){
+       <p id="para">Welcome to our first event you can sign here </p>
+     </div>
+     <img src="laptop.gif">
+    </div>
+        <form action="result.php" method="post" class = "col-md-6 col-sm-12 float-right  " >
+              <div class="form-group ">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" name="prenom" placeholder="Name">
+                <div><p id=nomr></p></div>
+              </div>
+              <div class="form-group ">
+                <label for="inputSurname4">Surname</label>
+                <input type="text" class="form-control" name="nom" placeholder="Surname">
+                <div><p id=prenomr></p></div>
+              </div>
+            <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" name="email" placeholder="Email">
+                <div><p id=emailr></p></div>
+              </div>
+            <button type="submit" class="btn btn-primary" onclick="validation()">Submit</button>
+<a class="btn btn-outline-light" href="result.php">list of participants</a>
 
-            var apprenants = JSON.parse(data);
 
-            apprenants.forEach(apprenant => {
-
-                // Création d'un élément html 
-                var presentation =  $("<p></p>").text(apprenant.Nom + " " + apprenant.Prenom );
-                
-
-                // Insertion de l'élément html dans l'élément div
-                $("#app").append(presentation);
-            });
-        });
-
-    </script>
+          </form>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </body>
 </html>
